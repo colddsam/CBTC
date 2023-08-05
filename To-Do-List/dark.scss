@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+html,
+body {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+:root {
+    --dark: #292827;
+    --darker: #1C1B1A;
+    --darkest: #000000;
+    --light_grey: #686767;
+    --dark_grey: #4F4E4D;
+    --light: #FFFFFF;
+    --smoke_white: #eeeeee;
+    --pink: #ec4899;
+    --purple: #8b56fc;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: var(--dark);
+    color: white;
+    .main-object {
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--darker);
+        border: 0px solid;
+        border-radius: 20px;
+        box-shadow: 3px 3px 10px black;
+        header {
+            padding: 10px;
+            .top{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                h1 {
+                    padding-top: 10px;
+                    font-weight: bolder;
+                    padding-bottom: 20px;
+                    
+                }
+                .space{
+                    width: 300px;
+                }
+                button{
+                    border: 0px solid;
+                    border-radius: 50%;
+                    height: 35px;
+                    width: 35px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: black;
+                    cursor: pointer;
+                    
+                    img{
+                        border: 0px solid;
+                        border-radius: 50%;
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+            }
+            form{
+                padding-bottom: 5px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: left;
+                #new-task-input{
+                    background-color: var(--darkest);
+                    padding: 10px;
+                    outline: none;
+                    border: none;
+                    border-radius: 15px;
+                    height: 50px;
+                    width: 760px;
+                    margin-right: 10px;
+                    font-size: medium;
+                    color: white;
+                    ::placeholder{
+                        color: var(--light_grey);
+                    }
+                }
+
+                #new-task-submit{
+                    padding-right: 10px;
+                    color: var(--pink);
+                    border: none;
+                    outline: none;
+                    font-size: medium;
+                    background: linear-gradient(to right, var(--pink),var(--purple));
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    cursor: pointer;
+                }
+                #new-task-submit:hover{
+                    transform: translateY(2px);
+                    background: linear-gradient(to right, var(--purple), var(--pink));
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                }
+            }
+
+        }
+        main{
+            .task-list{
+                padding-left: 10px;
+                padding-bottom: 10px;
+                h2{
+                    font-size: 30px;
+                    margin-bottom: 10px;
+                }
+                #tasks{
+                    overflow-x: hidden;
+                    overflow-y: scroll;
+                    scrollbar-width: none;
+                    height: 400px;
+                    -ms-overflow-style: none;
+                    .task{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: top;
+                        justify-content: left;
+                        .index {
+                                background-color: red;
+                                height: 50px;
+                                width: 50px;
+                                margin-top: 10px;
+                                margin-right: 10px;
+                                border: 0px solid;
+                                border-radius: 50%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: medium;
+                        }
+                        .full-content{
+                            display: flex;
+                            flex-direction: column;
+                            margin: 5px 0px 5px 0px;
+                            padding-top: 5px;
+                            .upper-content {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    justify-content: left;
+                            
+                                    .content {
+                                        padding-right: 10px;
+                                    
+                                        .text {
+                                            background-color: var(--darkest);
+                                            padding: 15px;
+                                            outline: none;
+                                            border: none;
+                                            border-radius: 15px;
+                                            width: 700px;
+                                            font-size: medium;
+                                            color: white;
+                                        }
+                                    }
+                                
+                                    .actions {
+                                        display: flex;
+                                        flex-direction: row;
+                                        padding-right: 10px;
+                                    
+                                        .edit {
+                                            padding-right: 10px;
+                                            color: var(--pink);
+                                            border: none;
+                                            outline: none;
+                                            font-size: medium;
+                                            background: linear-gradient(to right, var(--pink), var(--purple));
+                                            -webkit-text-fill-color: transparent;
+                                            -webkit-background-clip: text;
+                                            background-clip: text;
+                                            cursor: pointer;
+                                        }
+                                    
+                                        .edit:hover {
+                                            transform: translateY(2px);
+                                            background: linear-gradient(to right, var(--purple), var(--pink));
+                                            -webkit-text-fill-color: transparent;
+                                            -webkit-background-clip: text;
+                                            background-clip: text;
+                                        }
+                                    
+                                        .delete {
+                                            padding-right: 10px;
+                                            color: crimson;
+                                            border: none;
+                                            outline: none;
+                                            font-size: medium;
+                                            background: linear-gradient(to right, crimson, orange);
+                                            -webkit-text-fill-color: transparent;
+                                            -webkit-background-clip: text;
+                                            background-clip: text;
+                                            cursor: pointer;
+                                        }
+                                    
+                                        .delete:hover {
+                                            transform: translateY(2px);
+                                            background: linear-gradient(to right, orange, crimson);
+                                            -webkit-text-fill-color: transparent;
+                                            -webkit-background-clip: text;
+                                            background-clip: text;
+                                        }
+                                    }
+                                }
+
+                            .middle-content {
+                                margin-left: 15px;
+                                height: 25px;
+                                width: 100px;
+                                border: var(--darkest) solid;
+                                border-bottom: 0px;
+                                border-top: 0px;
+                            }
+
+                            .lower-content {
+                                background-color: var(--darkest);
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: left;
+                                padding: 10px;
+                                outline: none;
+                                border: none;
+                                border-radius: 15px;
+                                color: white;
+                                width: 200px;
+                                .time{
+                                    font-size: small;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+                #tasks::-webkit-scrollbar{
+                    display: none;
+                }
+
+            }
+        }
+    }
+}

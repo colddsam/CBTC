@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="light.css">
+    <script src="script.js"></script>
+    <title>TO-DO-LIST</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main-object">
+            <header>
+                <div class="top">
+                    <h1>Welcome to My TO-DO-LIST</h1>
+                    <div class="space"></div>
+                    <button title="button" type="button" id="toggle" onclick="toggle()">
+                        <img src="https://img.icons8.com/external-glyph-silhouettes-icons-papa-vector/78/external-Light-Mode-interface-glyph-silhouettes-icons-papa-vector.png" alt="mode" id="mode">
+                    </button>
+                </div>
+                <form id="new-task-form">
+                    <input type="text" id="new-task-input" placeholder="Enter your task to schedule"/>
+                    <input type="submit" value="Add task" id="new-task-submit"/>
+                </form>
+            </header>
+            <main>
+                <section class="task-list">
+                    <h2>Tasks</h2>
+                    <div id="tasks"></div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script src="utils.js"></script>
+</body>
+</html>

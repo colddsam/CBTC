@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" id="light">
+    <script src="script.js"></script>
+    <title>CALCULATOR</title>
+</head>
+<body>
+    <div class="container">
+        <h1>My Calculator</h1>
+        <div class="calculator">
+            <div class="toggle-bar">
+                <button id="toggle" onclick="toggle()">
+                    <img src="https://img.icons8.com/external-glyph-silhouettes-icons-papa-vector/78/external-Light-Mode-interface-glyph-silhouettes-icons-papa-vector.png" alt="mode" class="mode" id="mode">
+                </button>
+
+            </div>
+            <div class="display" id="display">
+                <input type="text" id="upper-display" class="upper-display">
+                <input type="text" id="lower-display" class="lower-display">
+            </div>
+            <div class="keys">
+                <button class="button" onclick="clear_text()">🆑</button>
+                <button class="button operator" onclick="press('&#40')">&#40;</button>
+                <button class="button operator" onclick="press('&#41')">&#41;</button>
+                <button class="button operator" onclick="press('/')">/</button>
+                <button class="button" onclick="press('7')">7</button>
+                <button class="button" onclick="press('8')">8</button>
+                <button class="button" onclick="press('9')">9</button>
+                <button class="button operator" onclick="press('*')">X</button>
+                <button class="button" onclick="press('4')">4</button>
+                <button class="button"onclick="press('5')">5</button>
+                <button class="button" onclick="press('6')">6</button>
+                <button class="button operator" onclick="press('-')">-</button>
+                <button class="button" onclick="press('1')">1</button>
+                <button class="button" onclick="press('2')">2</button>
+                <button class="button" onclick="press('3')">3</button>
+                <button class="button operator" onclick="press('+')">+</button>
+                <button class="button" onclick="press('0')">0</button>
+                <button class="button operator" onclick="press('.')">.</button>
+                <button class="button" onclick="back()">⬅️</button>
+                <button class="button operator" id="submit" onclick="check()">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="utils.js"></script>
+</body>
+</html>
